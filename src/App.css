@@ -258,7 +258,8 @@ table th {
 }
 
 .add-post-wrap,
-.dropdown-wrap {
+.dropdown-wrap,
+.postal-wrap {
     text-align: center;
 }
 
