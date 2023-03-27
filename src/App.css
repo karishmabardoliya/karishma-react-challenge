@@ -91,6 +91,182 @@ header .icon-burger .line {
     transition: all .5s ease-in-out;
 }
 
+.loader {
+    position: absolute;
+    margin-left: 50%;
+    margin-top: auto;
+    width: 48px;
+    height: 48px;
+    border: 5px solid black;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.popup {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.popup_inner {
+    position: absolute;
+    left: 25%;
+    right: 25%;
+    top: 25%;
+    bottom: 25%;
+    margin: auto;
+    background: white;
+}
+
+.popup-header {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px;
+}
+
+.popup-header button {
+    width: 10%;
+    font-size: 2rem;
+    background: white;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+}
+
+.popup-title {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.popup-body {
+    text-align: center;
+}
+
+.form-group label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-group {
+    display: grid;
+    margin-bottom: 5%;
+}
+
+.popup-body textarea {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.popup-buttons {
+    display: flex;
+    justify-content: space-evenly;
+    justify-items: center;
+}
+
+.popup-buttons button {
+    padding: 10px;
+    border-radius: 2rem;
+    font-size: 1rem;
+}
+
+.button-submit {
+    background-color: #3bd03b;
+}
+
+.button-cancle {
+    background-color: rgb(212, 211, 211);
+}
+
+table {
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    table-layout: fixed;
+}
+
+table caption {
+    font-size: 1.5em;
+    margin: .5em 0 .75em;
+}
+
+table tr {
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    padding: .35em;
+}
+
+table th,
+table td {
+    padding: .625em;
+    text-align: center;
+}
+
+table th {
+    font-size: .85em;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+}
+
+.main-wrapper {
+    margin-top: 8%;
+}
+
+.add-new-button {
+    margin: 10px;
+    padding: 15px;
+    border-radius: 2rem;
+    background-color: #3e65da;
+    color: #fff;
+    cursor: pointer;
+}
+
+.search-text {
+    padding: 15px;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.table-button {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.add-post-wrap{
+    text-align: center;
+}
+
+@media screen and (max-width: 1050px) {
+    .main-wrapper {
+        margin-top: 10%;
+    }
+}
+
 @media screen and (max-width: 768px) {
     header .logo {
         float: none;
@@ -137,5 +313,58 @@ header .icon-burger .line {
 
     header :checked~.icon-burger .line:nth-child(2) {
         opacity: 0;
+    }
+
+    .main-wrapper {
+        margin-top: 15%;
+    }
+
+    table {
+        border: 0;
+    }
+
+    table caption {
+        font-size: 1.3em;
+    }
+
+    table thead {
+        border: none;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+    }
+
+    table tr {
+        border-bottom: 3px solid #ddd;
+        display: block;
+        margin-bottom: .625em;
+    }
+
+    table td {
+        border-bottom: 1px solid #ddd;
+        display: block;
+        font-size: .8em;
+        text-align: right;
+    }
+
+    table td::before {
+        content: attr(data-label);
+        float: left;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    table td:last-child {
+        border-bottom: 0;
+    }
+}
+
+@media screen and (max-width: 475px) {
+    .main-wrapper {
+        margin-top: 30%;
     }
 }
