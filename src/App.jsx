@@ -4,6 +4,7 @@ import { Routes, Route } from "react-router-dom";
 import Home from "./Home";
 import Universities from "./Universities";
 import PostalLookUp from "./Postal-lookup";
+import 'react-toastify/dist/ReactToastify.css';
 
 const App = () => {
 	return (
