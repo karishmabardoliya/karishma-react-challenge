@@ -257,8 +257,36 @@ table th {
     cursor: pointer;
 }
 
-.add-post-wrap{
+.add-post-wrap,
+.dropdown-wrap {
     text-align: center;
+}
+
+.dropdown-label {
+    margin: 5px;
+}
+
+.select-dropdown {
+    font-size: 1rem;
+    padding: 10px;
+    text-align: center;
+    border-radius: 2rem;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    max-width: 50%;
+    margin: 0 auto;
+    flex-direction: column;
+}
+
+.card {
+    height: 140px;
+    margin: 12px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 12px rgb(63, 63, 63);
 }
 
 @media screen and (max-width: 1050px) {
